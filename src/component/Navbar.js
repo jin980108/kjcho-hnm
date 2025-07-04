@@ -5,8 +5,6 @@ import logo from '../image/logo.png';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-//onKeyPress는 17버전 이후로 사용이 안되므로 onKeyDown으로 변경
-
 const Navbar = () => {
 
     const menulist = ["여성", "Divided", "남성", "신생아/유아", "아동", "H&M Home", "Sale", "지속가능성 " ];
@@ -17,15 +15,6 @@ const Navbar = () => {
         navigate("/login");
     }
 
-    const search = (event) => {
-        if(event.key === "Enter"){
-
-            let keyword = event.target.value;    
-            
-            navigate(`/?q=${keyword}`);
-        
-        }
-    }
 
   return (
     <div>
@@ -36,7 +25,7 @@ const Navbar = () => {
             </div>
         </div>
         <div className = "nav-section">
-            <img width={100} src= {logo}/>
+            <img width={100} src= {logo} />
         </div>
         <div className="menu-area">
                 <ul className="menu-list" >
@@ -44,7 +33,7 @@ const Navbar = () => {
                 </ul>
             <div className="search-bar">
                 <FontAwesomeIcon icon={faSearch} />
-                <input type = "text" onKeyDown={ (event)=>search(event) }/> 
+                <input type = "text" />
             </div>
         </div>
     </div>
