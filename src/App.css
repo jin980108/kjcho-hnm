@@ -47,3 +47,30 @@
 .img:hover{
     transform: scale(1.05);
 }
+
+.product-img{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.size-box{
+    margin-top:20px;
+}
+
+.add-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:40px;
+    margin-top:20px;
+    background-color: #dc3545;
+    color:white;
+    border-radius: 6px;
+}
+
+.add-box:hover{
+    cursor: pointer;
+    background-color: #bb2d3b;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
